@@ -1,0 +1,120 @@
+{{#if desk}}
+   <nav class="navbar navbar-expand-lg colorNav">
+        <div class="container">
+            <a class="navbar-brand text-white" href="/">
+                {{!-- <img src="https://i.ibb.co/hL0T0jG/Recurso-1-2x-8.png"> --}}
+                <img src="https://i.ibb.co/k8BC8BZ/Recurso-3-8.png" width="35" height="35">
+            Emergencias.guide</a>
+            <button class="navbar-toggler" id="newLinkBtn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarNav">
+                <ul class="navbar-nav ms-auto ">
+                    {{#if user.adminGeneral}}
+                        <li class="nav-item ">
+                            <a class="nav-link " style="color:#33E9FF">
+                                AG {{user.usuario}}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/links/panel" role="button">
+                                Panel de control
+                            </a>
+                        </li>
+                    {{/if}}
+                    {{#if user.adminSucursal}}
+                        <li class="nav-item ">
+                            <a class="nav-link " style="color:#1fb919">
+                                AS {{user.usuario}}
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/links/panelAdminSuc" role="button">
+                                Gestión Centros
+                            </a>
+                        </li>
+                    {{/if}}
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/links" role="button">
+                                Directorio Medico
+                            </a>
+                        </li>
+                    {{#if user}}    
+                        <li class="nav-item">
+                            <a class="nav-link position-relative text-white" id="newLink" href="/links/emergencias" role="button">
+                                Emergencias
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/profile" role="button">
+                                Mi Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/logout" role="button">
+                                Cerrar Sesión
+                            </a>
+                        </li>
+                    {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/signin" role="button">
+                                Iniciar Sesión
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="/signup" role="button">
+                                Registrarse
+                            </a>
+                        </li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+{{else}}
+    <nav class="navbar navbar-dark bg-dark ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Emergencias.guide</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Emergencias.guide</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    {{#if user}}    
+                        <li class="nav-item">
+                            <a class="nav-link" href="/profile" role="button">
+                                Mi Perfil
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/logout" role="button">
+                                Cerrar Sesión
+                            </a>
+                        </li>
+                    {{else}}
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signin" role="button">
+                                Iniciar Sesión
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/signup" role="button">
+                                Registrarse
+                            </a>
+                        </li>
+                    {{/if}}
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+{{/if}}

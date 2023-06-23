@@ -1,0 +1,81 @@
+<div class="container p-4 ">
+    <div class="">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="text-center p-3 mb-4">
+                    <h2>Detalles y resultados de Eficiencia Energetica</h2>
+                    <h5>Fecha y hora: {{eficiencia.fecha}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="display:flex; justify-content:center; align-items:center;">
+            {{!-- <div class="row g-0">
+                <div class="col-md-4" style="display: flex; justify-content: center;align-items: center;">
+                    <img src="/img/green-energy.png" class="img-fluid rounded-start" alt="..." width="200">
+                </div> --}}
+                <div class="col-md-8" >
+                    {{#each resultado}}
+                        <div class="card-body">
+                            <hr>
+                            <h5 class="card-title mt-3 text-center">Nombre del Ambiente: {{nombre}}</h5>
+
+                            <div class="list-group">
+                                {{#each detalle}}
+                                    <li class="list-group-item list-group-item-success mb-3">
+                                        <div class="text-center p-3">
+                                            Tipo de iluminación: {{tipo_foco}} <br>
+                                            Cantidad: {{cantidad}} <br>
+                                            Potencia: {{potencia}} Watts. <br>
+                                            Lumenes: {{lumenes}} Lm.<br>
+                                            Consumo Diario: {{consumo_diario}} Hrs. <br>
+                                            Area Iluminada: {{area_iluminada}} m2.<br>
+                                        </div>
+
+                                        <table class="table p-3 list-group-item">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Observaciones</th>
+                                                    <th scope="col">Detalle</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="list-group-item-action">
+                                                    <td>Iluminación</td>
+                                                    <td>{{observacion.tipo_foco}}</td>
+                                                </tr>
+                                                <tr class="list-group-item-action">
+                                                    <td>Lumenes</td>
+                                                    <td>{{observacion.lumenes2}} Lm.</td>
+                                                </tr>
+                                                <tr class="list-group-item-action">
+                                                    <td>Potencia</td>
+                                                    <td>{{observacion.potenciaSugerida}}</td>
+                                                </tr>
+                                                <tr class="list-group-item-action">
+                                                    <td>Consumo Actual</td>
+                                                    <td>{{observacion.consumoActual}} kWh.</td>
+                                                </tr>
+                                                <tr class="list-group-item-action">
+                                                    <td>Consumo Con Cambios</td>
+                                                    <td>{{observacion.consumoEficiente}} kWh. (Rango de desvío 5%)</td>
+                                                </tr>
+                                                <tr class="list-group-item-action table-warning">
+                                                    <td>Diferencia</td>
+                                                    <td>{{observacion.pagoAcutal}}</td>
+                                                </tr>
+                                                <tr class="list-group-item-action table-warning">
+                                                    <td>Ahorro</td>
+                                                    <td>{{observacion.diferencia}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                {{/each}}
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

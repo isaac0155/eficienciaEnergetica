@@ -1,0 +1,2718 @@
+
+<script type='text/javascript' src='https://www.cre.com.bo/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp'></script>
+<script type='text/javascript'
+    src='https://www.cre.com.bo/wp-content/themes/cre/js/jquery.dlmenu.js?ver=20151215'></script>
+<script type='text/javascript'
+    src='https://www.cre.com.bo/wp-content/themes/cre/js/simple-lightbox.min.js?ver=20151215'></script>
+
+<main>
+
+    <section class="bloque consumo-simulador-container mt-5" style="">
+        <div class="container">
+            <div class="row from-intro justify-content-center">
+                <div class="col-12 col-lg-10">
+                    <div class="bloque-content text-center">
+                        <div class="feature">
+                            <h3>Calculadora de Elementos Eléctricos del Hogar</h3>
+                            <img src="/img/presupuesto.png" alt="Calculadora de Elementos Eléctricos" class="img-fluid" width="200" />
+                            <p style="text-align: center;">Selecciona los artefactos que utilizás para obtener un cálculo de
+                        </div>
+                            tu consumo en kWh al mes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="total-duplicate" style="display: none;">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div>Consumo total mes <span id="totalCost2" class="h3 bold">--</span></div>
+                    <div><a class="smooth-scroll" href="#detalle-consumo">Ver detalles</a></div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="selector-container text-center">
+                        <h4>Selecciona los artefactos eléctricos</h4>
+                        <select id="groups" class="form-control">
+                            <option value="audio">Audio</option>
+                            <option value="bombas-y-compresores">Bombas y Compresores</option>
+                            <option value="climatizacion-de-agua">Climatización de Agua</option>
+                            <option value="climatizacion-de-ambientes">Climatización de Ambientes</option>
+                            <option value="cuidado-personal-y-salud">Cuidado personal y salud</option>
+                            <option value="electrodomesticos-para-el-hogar">Electrodomésticos para el hogar</option>
+                            <option value="electrodomesticos-para-la-cocina">Electrodomésticos para la cocina</option>
+                            <option value="electronica">Electrónica</option>
+                            <option value="equipos-de-ofimatica">Equipos de Ofimática</option>
+                            <option value="herrramientas-electricas">Herrramientas Eléctricas</option>
+                            <option value="iluminacion">Iluminación</option>
+                            <option value="linea-blanca">Línea Blanca</option>
+                            <option value="motores">Motores</option>
+                            <option value="refrigeracion">Refrigeración</option>
+                            <option value="video">Video</option>
+                            <option value="custom">A Medida</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="options-list">
+                <div class="row">
+
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-central-60000-btu" class="form-check-input"
+                                    type="checkbox" name="product" value="aire-acondicionado-central-60000-btu"
+                                    data-power="17583" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-aire-acondicionado-central-60000-btu"><span
+                                        class="check"></span> Aire Acondicionado Central 60000 BTU</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-12000-btu" class="form-check-input"
+                                    type="checkbox" name="product" value="aire-acondicionado-de-12000-btu"
+                                    data-power="1300" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-aire-acondicionado-de-12000-btu"><span
+                                        class="check"></span> Aire Acondicionado de 12000 BTU</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-12000-btu-tecnologia-inverter"
+                                    class="form-check-input" type="checkbox" name="product"
+                                    value="aire-acondicionado-de-12000-btu-tecnologia-inverter" data-power="850"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-aire-acondicionado-de-12000-btu-tecnologia-inverter"><span
+                                        class="check"></span> Aire Acondicionado de 12000 BTU (Tecnología
+                                    Inverter)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-18000-btu" class="form-check-input"
+                                    type="checkbox" name="product" value="aire-acondicionado-de-18000-btu"
+                                    data-power="1950" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-aire-acondicionado-de-18000-btu"><span
+                                        class="check"></span> Aire Acondicionado de 18000 BTU</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-18000-btu-tecnologia-inverter"
+                                    class="form-check-input" type="checkbox" name="product"
+                                    value="aire-acondicionado-de-18000-btu-tecnologia-inverter" data-power="1400"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-aire-acondicionado-de-18000-btu-tecnologia-inverter"><span
+                                        class="check"></span> Aire Acondicionado de 18000 BTU (Tecnología
+                                    Inverter)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-24000-btu" class="form-check-input"
+                                    type="checkbox" name="product" value="aire-acondicionado-de-24000-btu"
+                                    data-power="2800" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-aire-acondicionado-de-24000-btu"><span
+                                        class="check"></span> Aire Acondicionado de 24000 BTU</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-24000-btu-tecnologia-inverter"
+                                    class="form-check-input" type="checkbox" name="product"
+                                    value="aire-acondicionado-de-24000-btu-tecnologia-inverter" data-power="2080"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-aire-acondicionado-de-24000-btu-tecnologia-inverter"><span
+                                        class="check"></span> Aire Acondicionado de 24000 BTU (Tecnología
+                                    Inverter)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-9000-btu" class="form-check-input"
+                                    type="checkbox" name="product" value="aire-acondicionado-de-9000-btu"
+                                    data-power="1000" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-aire-acondicionado-de-9000-btu"><span
+                                        class="check"></span> Aire Acondicionado de 9000 BTU</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aire-acondicionado-de-9000-btu-tecnologia-inverter"
+                                    class="form-check-input" type="checkbox" name="product"
+                                    value="aire-acondicionado-de-9000-btu-tecnologia-inverter" data-power="525"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-aire-acondicionado-de-9000-btu-tecnologia-inverter"><span
+                                        class="check"></span> Aire Acondicionado de 9000 BTU (Tecnología
+                                    Inverter)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-amoladora-1-1-4-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="amoladora-1-1-4-hp" data-power="920" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-amoladora-1-1-4-hp"><span
+                                        class="check"></span> Amoladora (1 1/4 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-amoladora-1-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="amoladora-1-hp" data-power="740" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-amoladora-1-hp"><span class="check"></span>
+                                    Amoladora (1 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-amoladora-1-5hp" class="form-check-input" type="checkbox"
+                                    name="product" value="amoladora-1-5hp" data-power="1119" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-amoladora-1-5hp"><span
+                                        class="check"></span> Amoladora (1.5HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  audio">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-amplificador-2000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="amplificador-2000-w" data-power="2000" data-default-amount="1"
+                                    data-default-daily-use="4" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-amplificador-2000-w"><span
+                                        class="check"></span> Amplificador (2000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aspiradora-350-w" class="form-check-input" type="checkbox"
+                                    name="product" value="aspiradora-350-w" data-power="350" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="3">
+                                <label class="form-check-label" for="product-aspiradora-350-w"><span
+                                        class="check"></span> Aspiradora (350 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aspiradora-500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="aspiradora-500-w" data-power="500" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="3">
+                                <label class="form-check-label" for="product-aspiradora-500-w"><span
+                                        class="check"></span> Aspiradora (500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aspiradora-800-w" class="form-check-input" type="checkbox"
+                                    name="product" value="aspiradora-800-w" data-power="800" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="3">
+                                <label class="form-check-label" for="product-aspiradora-800-w"><span
+                                        class="check"></span> Aspiradora (800 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-aspiradra-1250-w" class="form-check-input" type="checkbox"
+                                    name="product" value="aspiradra-1250-w" data-power="1250" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="3">
+                                <label class="form-check-label" for="product-aspiradra-1250-w"><span
+                                        class="check"></span> Aspiradra (1250 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-balanza-electronica-100-w" class="form-check-input" type="checkbox"
+                                    name="product" value="balanza-electronica-100-w" data-power="100"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-balanza-electronica-100-w"><span
+                                        class="check"></span> Balanza Electrónica (100 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-balanza-electronica-250-w" class="form-check-input" type="checkbox"
+                                    name="product" value="balanza-electronica-250-w" data-power="250"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-balanza-electronica-250-w"><span
+                                        class="check"></span> Balanza Electrónica (250 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-batidora" class="form-check-input" type="checkbox" name="product"
+                                    value="batidora" data-power="700" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-batidora"><span class="check"></span>
+                                    Batidora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electronica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-biometrico" class="form-check-input" type="checkbox" name="product"
+                                    value="biometrico" data-power="20" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-biometrico"><span class="check"></span>
+                                    Biométrico</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-blue-ray" class="form-check-input" type="checkbox" name="product"
+                                    value="blue-ray" data-power="70" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-blue-ray"><span class="check"></span> Blue
+                                    Ray</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electronica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-bola-juego-de-luces" class="form-check-input" type="checkbox"
+                                    name="product" value="bola-juego-de-luces" data-power="150" data-default-amount="1"
+                                    data-default-daily-use="4" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-bola-juego-de-luces"><span
+                                        class="check"></span> Bola -Juego de Luces</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-bomba-de-agua-40-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="bomba-de-agua-40-hp" data-power="29840"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-bomba-de-agua-40-hp"><span
+                                        class="check"></span> Bomba de Agua (40 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-bomba-de-agua-3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="bomba-de-agua-3-hp" data-power="2238" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-bomba-de-agua-3-hp"><span
+                                        class="check"></span> Bomba de Agua (3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-bomba-de-agua-30-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="bomba-de-agua-30-hp" data-power="22370"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-bomba-de-agua-30-hp"><span
+                                        class="check"></span> Bomba de Agua (30 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-bomba-de-agua-7-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="bomba-de-agua-7-hp" data-power="5222" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-bomba-de-agua-7-hp"><span
+                                        class="check"></span> Bomba de Agua (7 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-bomba-de-surtidor-de-gasolina-1-1-2-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="bomba-de-surtidor-de-gasolina-1-1-2-hp"
+                                    data-power="1119" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-bomba-de-surtidor-de-gasolina-1-1-2-hp"><span class="check"></span>
+                                    Bomba de Surtidor de gasolina (1 1/2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cafetera-electrica-2000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cafetera-electrica-2000-w" data-power="2000"
+                                    data-default-amount="1" data-default-daily-use="0.5" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cafetera-electrica-2000-w"><span
+                                        class="check"></span> Cafetera Eléctrica (2000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cafetera-electrica-550-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cafetera-electrica-550-w" data-power="550"
+                                    data-default-amount="1" data-default-daily-use="0.5" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cafetera-electrica-550-w"><span
+                                        class="check"></span> Cafetera Eléctrica (550 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cafetera-electrica-5520-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cafetera-electrica-5520-w" data-power="5520"
+                                    data-default-amount="1" data-default-daily-use="0.5" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cafetera-electrica-5520-w"><span
+                                        class="check"></span> Cafetera Eléctrica (5520 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cafetera-electrica-750-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cafetera-electrica-750-w" data-power="750"
+                                    data-default-amount="1" data-default-daily-use="0.5" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cafetera-electrica-750-w"><span
+                                        class="check"></span> Cafetera Eléctrica (750 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cafetera-electrica-de-expreso" class="form-check-input"
+                                    type="checkbox" name="product" value="cafetera-electrica-de-expreso"
+                                    data-power="1000" data-default-amount="1" data-default-daily-use="0.5"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cafetera-electrica-de-expreso"><span
+                                        class="check"></span> Cafetera Eléctrica de Expreso</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-calefon-electrico-1000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="calefon-electrico-1000-w" data-power="1000"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-calefon-electrico-1000-w"><span
+                                        class="check"></span> Calefón Eléctrico (1000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-calefon-electrico-1500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="calefon-electrico-1500-w" data-power="1500"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-calefon-electrico-1500-w"><span
+                                        class="check"></span> Calefón Eléctrico (1500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-calefon-electrico-2200-w" class="form-check-input" type="checkbox"
+                                    name="product" value="calefon-electrico-2200-w" data-power="2200"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-calefon-electrico-2200-w"><span
+                                        class="check"></span> Calefón Eléctrico (2200 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-calefon-electrico-2500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="calefon-electrico-2500-w" data-power="2500"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-calefon-electrico-2500-w"><span
+                                        class="check"></span> Calefón Eléctrico (2500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-calefon-electrico-4700-w" class="form-check-input" type="checkbox"
+                                    name="product" value="calefon-electrico-4700-w" data-power="4710"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-calefon-electrico-4700-w"><span
+                                        class="check"></span> Calefón Eléctrico (4700 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-calefon-electrico-800-w" class="form-check-input" type="checkbox"
+                                    name="product" value="calefon-electrico-800-w" data-power="800"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-calefon-electrico-800-w"><span
+                                        class="check"></span> Calefón Eléctrico (800 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cama-solar" class="form-check-input" type="checkbox" name="product"
+                                    value="cama-solar" data-power="12800" data-default-amount="1"
+                                    data-default-daily-use="4" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-cama-solar"><span class="check"></span>
+                                    Cama Solar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-camara-de-vigilancia" class="form-check-input" type="checkbox"
+                                    name="product" value="camara-de-vigilancia" data-power="10" data-default-amount="1"
+                                    data-default-daily-use="24" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-camara-de-vigilancia"><span
+                                        class="check"></span> Cámara de Vigilancia</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  refrigeracion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-camara-frigorifica-grande" class="form-check-input" type="checkbox"
+                                    name="product" value="camara-frigorifica-grande" data-power="2600"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-camara-frigorifica-grande"><span
+                                        class="check"></span> Cámara Frigorífica Grande</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  refrigeracion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-camara-frigorifica-pequena" class="form-check-input" type="checkbox"
+                                    name="product" value="camara-frigorifica-pequena" data-power="1360"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-camara-frigorifica-pequena"><span
+                                        class="check"></span> Cámara Frigorífica Pequeña</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cava-de-vino-16-botellas" class="form-check-input" type="checkbox"
+                                    name="product" value="cava-de-vino-16-botellas" data-power="70"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cava-de-vino-16-botellas"><span
+                                        class="check"></span> Cava de Vino 16 botellas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cava-de-vino-29-botellas" class="form-check-input" type="checkbox"
+                                    name="product" value="cava-de-vino-29-botellas" data-power="120"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cava-de-vino-29-botellas"><span
+                                        class="check"></span> Cava de Vino 29 botellas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cepilladora-5-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="cepilladora-5-hp" data-power="3730" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cepilladora-5-hp"><span
+                                        class="check"></span> Cepilladora (5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cepilladora3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="cepilladora3-hp" data-power="2238" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cepilladora3-hp"><span
+                                        class="check"></span> Cepilladora(3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-chiller-de-120000-btu" class="form-check-input" type="checkbox"
+                                    name="product" value="chiller-de-120000-btu" data-power="10060"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-chiller-de-120000-btu"><span
+                                        class="check"></span> Chiller de 120000 BTU</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-chiller-de-120000-btu-tecnologia-inverter" class="form-check-input"
+                                    type="checkbox" name="product" value="chiller-de-120000-btu-tecnologia-inverter"
+                                    data-power="6800" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-chiller-de-120000-btu-tecnologia-inverter"><span class="check"></span>
+                                    Chiller de 120000 BTU (Tecnología Inverter)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-circuito-cerrado" class="form-check-input" type="checkbox"
+                                    name="product" value="circuito-cerrado" data-power="80" data-default-amount="1"
+                                    data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-circuito-cerrado"><span
+                                        class="check"></span> Circuito Cerrado</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cocinilla-electrica-1000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cocinilla-electrica-1000-w" data-power="1000"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cocinilla-electrica-1000-w"><span
+                                        class="check"></span> Cocinilla Eléctrica (1000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cocinilla-electrica-1500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cocinilla-electrica-1500-w" data-power="1500"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cocinilla-electrica-1500-w"><span
+                                        class="check"></span> Cocinilla Eléctrica (1500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cocinilla-electrica-500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cocinilla-electrica-500-w" data-power="500"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-cocinilla-electrica-500-w"><span
+                                        class="check"></span> Cocinilla Eléctrica (500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-15-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="compresor-15-hp" data-power="11190" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-compresor-15-hp"><span
+                                        class="check"></span> Compresor (15 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-2hp" class="form-check-input" type="checkbox"
+                                    name="product" value="compresor-2hp" data-power="1492" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-compresor-2hp"><span class="check"></span>
+                                    Compresor (2HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-7-5-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="compresor-7-5-hp" data-power="5595" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-compresor-7-5-hp"><span
+                                        class="check"></span> Compresor (7.5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-1-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="compresor-1-2-hp" data-power="368" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-compresor-1-2-hp"><span
+                                        class="check"></span> Compresor 1/2 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="compresor-3-hp" data-power="2238" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-compresor-3-hp"><span class="check"></span>
+                                    Compresor 3 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-5-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="compresor-5-hp" data-power="3680" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-compresor-5-hp"><span class="check"></span>
+                                    Compresor 5 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-para-venta-de-gas-vehicular-150-hp"
+                                    class="form-check-input" type="checkbox" name="product"
+                                    value="compresor-para-venta-de-gas-vehicular-150-hp" data-power="112350"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-compresor-para-venta-de-gas-vehicular-150-hp"><span
+                                        class="check"></span> Compresor para Venta de Gas Vehicular (150 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-compresor-para-venta-de-gas-vehicular-180-hp"
+                                    class="form-check-input" type="checkbox" name="product"
+                                    value="compresor-para-venta-de-gas-vehicular-180-hp" data-power="132000"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label"
+                                    for="product-compresor-para-venta-de-gas-vehicular-180-hp"><span
+                                        class="check"></span> Compresor para Venta de Gas Vehicular (180 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-computadora-400-w" class="form-check-input" type="checkbox"
+                                    name="product" value="computadora-400-w" data-power="400" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-computadora-400-w"><span
+                                        class="check"></span> Computadora (400 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-computadora-portatil" class="form-check-input" type="checkbox"
+                                    name="product" value="computadora-portatil" data-power="300" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-computadora-portatil"><span
+                                        class="check"></span> Computadora Portátil</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-consola-de-juegos" class="form-check-input" type="checkbox"
+                                    name="product" value="consola-de-juegos" data-power="350" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-consola-de-juegos"><span
+                                        class="check"></span> Consola de Juegos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cortador-de-grama-1000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cortador-de-grama-1000-w" data-power="1000"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cortador-de-grama-1000-w"><span
+                                        class="check"></span> Cortador de Grama (1000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cortador-de-grama-1500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cortador-de-grama-1500-w" data-power="1500"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cortador-de-grama-1500-w"><span
+                                        class="check"></span> Cortador de Grama (1500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cortador-de-grama-750-w" class="form-check-input" type="checkbox"
+                                    name="product" value="cortador-de-grama-750-w" data-power="750"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cortador-de-grama-750-w"><span
+                                        class="check"></span> Cortador de Grama (750 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cortadora-de-fiambres-1-1-4hp" class="form-check-input"
+                                    type="checkbox" name="product" value="cortadora-de-fiambres-1-1-4hp"
+                                    data-power="932" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cortadora-de-fiambres-1-1-4hp"><span
+                                        class="check"></span> Cortadora de Fiambres (1 1/4HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cortadora-de-hueso-1-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="cortadora-de-hueso-1-2-hp" data-power="373"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cortadora-de-hueso-1-2-hp"><span
+                                        class="check"></span> Cortadora de Hueso (1/2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cortadora-de-pelo" class="form-check-input" type="checkbox"
+                                    name="product" value="cortadora-de-pelo" data-power="50" data-default-amount="1"
+                                    data-default-daily-use="4" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-cortadora-de-pelo"><span
+                                        class="check"></span> Cortadora de Pelo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-deshumificador" class="form-check-input" type="checkbox"
+                                    name="product" value="deshumificador" data-power="100" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-deshumificador"><span class="check"></span>
+                                    Deshumificador</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-despuntadora-3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="despuntadora-3-hp" data-power="2238" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-despuntadora-3-hp"><span
+                                        class="check"></span> Despuntadora (3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  refrigeracion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-dispensador-de-agua-sin-agua-caliente" class="form-check-input"
+                                    type="checkbox" name="product" value="dispensador-de-agua-sin-agua-caliente"
+                                    data-power="400" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label"
+                                    for="product-dispensador-de-agua-sin-agua-caliente"><span class="check"></span>
+                                    Dispensador de Agua (Sin Agua Caliente)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ducha-electrica-posicion-invierno" class="form-check-input"
+                                    type="checkbox" name="product" value="ducha-electrica-posicion-invierno"
+                                    data-power="5000" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-ducha-electrica-posicion-invierno"><span
+                                        class="check"></span> Ducha Eléctrica (posición Invierno)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ducha-electrica-posicion-verano" class="form-check-input"
+                                    type="checkbox" name="product" value="ducha-electrica-posicion-verano"
+                                    data-power="2500" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-ducha-electrica-posicion-verano"><span
+                                        class="check"></span> Ducha Eléctrica (posición Verano)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ducha-solar" class="form-check-input" type="checkbox" name="product"
+                                    value="ducha-solar" data-power="12800" data-default-amount="1"
+                                    data-default-daily-use="4" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-ducha-solar"><span class="check"></span>
+                                    Ducha Solar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-dvd" class="form-check-input" type="checkbox" name="product"
+                                    value="dvd" data-power="40" data-default-amount="1" data-default-daily-use="2"
+                                    data-default-weekly-use="2">
+                                <label class="form-check-label" for="product-dvd"><span class="check"></span>
+                                    Dvd</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-envasadora" class="form-check-input" type="checkbox" name="product"
+                                    value="envasadora" data-power="750" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-envasadora"><span class="check"></span>
+                                    Envasadora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  audio">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-equipo-de-sonido-100-w" class="form-check-input" type="checkbox"
+                                    name="product" value="equipo-de-sonido-100-w" data-power="100"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-equipo-de-sonido-100-w"><span
+                                        class="check"></span> Equipo de Sonido (100 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  audio">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-equipo-de-sonido-2000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="equipo-de-sonido-2000-w" data-power="2000"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-equipo-de-sonido-2000-w"><span
+                                        class="check"></span> Equipo de Sonido (2000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  audio">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-equipo-de-sonido-375-w" class="form-check-input" type="checkbox"
+                                    name="product" value="equipo-de-sonido-375-w" data-power="375"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-equipo-de-sonido-375-w"><span
+                                        class="check"></span> Equipo de Sonido (375 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-equipo-de-tv-por-cable" class="form-check-input" type="checkbox"
+                                    name="product" value="equipo-de-tv-por-cable" data-power="35"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-equipo-de-tv-por-cable"><span
+                                        class="check"></span> Equipo de TV por Cable</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-equipo-dental" class="form-check-input" type="checkbox"
+                                    name="product" value="equipo-dental" data-power="150" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-equipo-dental"><span class="check"></span>
+                                    Equipo Dental</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-esmeril-1-4hp" class="form-check-input" type="checkbox"
+                                    name="product" value="esmeril-1-4hp" data-power="186" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-esmeril-1-4hp"><span class="check"></span>
+                                    Esmeril (1/4HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-esmeril-3-a-5-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="esmeril-3-a-5-hp" data-power="2980" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-esmeril-3-a-5-hp"><span
+                                        class="check"></span> Esmeril (3 A 5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-esmeril-15-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="esmeril-15-hp" data-power="1119" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-esmeril-15-hp"><span class="check"></span>
+                                    Esmeril (1,5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-esmeril-1-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="esmeril-1-2-hp" data-power="373" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-esmeril-1-2-hp"><span class="check"></span>
+                                    Esmeril (1/2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-esmeril-2-a-3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="esmeril-2-a-3-hp" data-power="1860" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-esmeril-2-a-3-hp"><span
+                                        class="check"></span> Esmeril (2 A 3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-esmeril-1-hp" class="form-check-input" type="checkbox" name="product"
+                                    value="esmeril-1-hp" data-power="746" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-esmeril-1-hp"><span class="check"></span>
+                                    Esmeril 1 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-ambientes">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-estufa-de-calefaccion" class="form-check-input" type="checkbox"
+                                    name="product" value="estufa-de-calefaccion" data-power="2000"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-estufa-de-calefaccion"><span
+                                        class="check"></span> Estufa de Calefacción</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-extractora-de-jugos" class="form-check-input" type="checkbox"
+                                    name="product" value="extractora-de-jugos" data-power="350" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-extractora-de-jugos"><span
+                                        class="check"></span> Extractora de Jugos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-incandescente-60-w" class="form-check-input" type="checkbox"
+                                    name="product" value="foco-incandescente-60-w" data-power="60"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-incandescente-60-w"><span
+                                        class="check"></span> Foco Incandescente (60 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-led-10-w" class="form-check-input" type="checkbox"
+                                    name="product" value="foco-led-10-w" data-power="10" data-default-amount="5"
+                                    data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-led-10-w"><span class="check"></span>
+                                    Foco LED (10 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-led-3-w" class="form-check-input" type="checkbox" name="product"
+                                    value="foco-led-3-w" data-power="3" data-default-amount="5"
+                                    data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-led-3-w"><span class="check"></span>
+                                    Foco LED (3 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-led-6-w" class="form-check-input" type="checkbox" name="product"
+                                    value="foco-led-6-w" data-power="6" data-default-amount="5"
+                                    data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-led-6-w"><span class="check"></span>
+                                    Foco LED (6 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-lfc-de-bajo-consumo-12-w" class="form-check-input"
+                                    type="checkbox" name="product" value="foco-lfc-de-bajo-consumo-12-w" data-power="12"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-lfc-de-bajo-consumo-12-w"><span
+                                        class="check"></span> Foco LFC de Bajo Consumo (12 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-lfc-de-bajo-consumo-15-w" class="form-check-input"
+                                    type="checkbox" name="product" value="foco-lfc-de-bajo-consumo-15-w" data-power="15"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-lfc-de-bajo-consumo-15-w"><span
+                                        class="check"></span> Foco LFC de Bajo Consumo (15 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-foco-lfc-de-bajo-consumo-18-w" class="form-check-input"
+                                    type="checkbox" name="product" value="foco-lfc-de-bajo-consumo-18-w" data-power="18"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-foco-lfc-de-bajo-consumo-18-w"><span
+                                        class="check"></span> Foco LFC de Bajo Consumo (18 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-focoiincandescente-100-w" class="form-check-input" type="checkbox"
+                                    name="product" value="focoiincandescente-100-w" data-power="100"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-focoiincandescente-100-w"><span
+                                        class="check"></span> FocoIincandescente (100 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-fotocopiadora-1500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="fotocopiadora-1500-w" data-power="1500"
+                                    data-default-amount="1" data-default-daily-use="0.5" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-fotocopiadora-1500-w"><span
+                                        class="check"></span> Fotocopiadora (1500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-fotocopiadora-700-w" class="form-check-input" type="checkbox"
+                                    name="product" value="fotocopiadora-700-w" data-power="700" data-default-amount="1"
+                                    data-default-daily-use="0.5" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-fotocopiadora-700-w"><span
+                                        class="check"></span> Fotocopiadora (700 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-freezer-310l-1-puerta" class="form-check-input" type="checkbox"
+                                    name="product" value="freezer-310l-1-puerta" data-power="260"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-freezer-310l-1-puerta"><span
+                                        class="check"></span> Freezer 310L 1 puerta</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-freezer-320l-horizontal" class="form-check-input" type="checkbox"
+                                    name="product" value="freezer-320l-horizontal" data-power="95"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-freezer-320l-horizontal"><span
+                                        class="check"></span> Freezer 320L horizontal</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-freezer-470l-2-puertas" class="form-check-input" type="checkbox"
+                                    name="product" value="freezer-470l-2-puertas" data-power="445"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-freezer-470l-2-puertas"><span
+                                        class="check"></span> Freezer 470L 2 puertas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-freezer-480l-doble-horizontal" class="form-check-input"
+                                    type="checkbox" name="product" value="freezer-480l-doble-horizontal"
+                                    data-power="500" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-freezer-480l-doble-horizontal"><span
+                                        class="check"></span> Freezer 480L doble horizontal</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-freezer-980l-4-puertas" class="form-check-input" type="checkbox"
+                                    name="product" value="freezer-980l-4-puertas" data-power="480"
+                                    data-default-amount="1" data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-freezer-980l-4-puertas"><span
+                                        class="check"></span> Freezer 980L 4 puertas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-freidora" class="form-check-input" type="checkbox" name="product"
+                                    value="freidora" data-power="1500" data-default-amount="1"
+                                    data-default-daily-use="0.5" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-freidora"><span class="check"></span>
+                                    Freidora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-frigobar" class="form-check-input" type="checkbox" name="product"
+                                    value="frigobar" data-power="100" data-default-amount="1"
+                                    data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-frigobar"><span class="check"></span>
+                                    Frigobar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electronica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-fuente-de-poder" class="form-check-input" type="checkbox"
+                                    name="product" value="fuente-de-poder" data-power="150" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-fuente-de-poder"><span
+                                        class="check"></span> Fuente de Poder</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-grill-1-pequeno" class="form-check-input" type="checkbox"
+                                    name="product" value="grill-1-pequeno" data-power="700" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-grill-1-pequeno"><span
+                                        class="check"></span> Grill 1 (Pequeño)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-grill-2-mediano" class="form-check-input" type="checkbox"
+                                    name="product" value="grill-2-mediano" data-power="1000" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-grill-2-mediano"><span
+                                        class="check"></span> Grill 2 (Mediano)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-grill-3-grande" class="form-check-input" type="checkbox"
+                                    name="product" value="grill-3-grande" data-power="1500" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-grill-3-grande"><span class="check"></span>
+                                    Grill 3 (Grande)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-con-freezer-de-201-a-300l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-con-freezer-de-201-a-300l"
+                                    data-power="120" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-con-freezer-de-201-a-300l"><span
+                                        class="check"></span> Heladera con Freezer de 201 a 300L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-con-freezer-de-301-a-400l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-con-freezer-de-301-a-400l"
+                                    data-power="150" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-con-freezer-de-301-a-400l"><span
+                                        class="check"></span> Heladera con Freezer de 301 a 400L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-con-freezer-de-401-a-500l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-con-freezer-de-401-a-500l"
+                                    data-power="190" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-con-freezer-de-401-a-500l"><span
+                                        class="check"></span> Heladera con Freezer de 401 a 500L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-con-freezer-de-501-a-600l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-con-freezer-de-501-a-600l"
+                                    data-power="220" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-con-freezer-de-501-a-600l"><span
+                                        class="check"></span> Heladera con Freezer de 501 a 600L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-con-freezer-hasta-200l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-con-freezer-hasta-200l"
+                                    data-power="75" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-con-freezer-hasta-200l"><span
+                                        class="check"></span> Heladera con Freezer hasta 200L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-sin-freezer-de-201-a-300l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-sin-freezer-de-201-a-300l"
+                                    data-power="90" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-sin-freezer-de-201-a-300l"><span
+                                        class="check"></span> Heladera sin Freezer de 201 a 300L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-sin-freezer-de-301-a-400l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-sin-freezer-de-301-a-400l"
+                                    data-power="120" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-sin-freezer-de-301-a-400l"><span
+                                        class="check"></span> Heladera sin Freezer de 301 a 400L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-heladera-sin-freezer-hasta-200l" class="form-check-input"
+                                    type="checkbox" name="product" value="heladera-sin-freezer-hasta-200l"
+                                    data-power="60" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-heladera-sin-freezer-hasta-200l"><span
+                                        class="check"></span> Heladera sin Freezer hasta 200L</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-hervidor-electrico" class="form-check-input" type="checkbox"
+                                    name="product" value="hervidor-electrico" data-power="1200" data-default-amount="1"
+                                    data-default-daily-use="0.5" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-hervidor-electrico"><span
+                                        class="check"></span> Hervidor Eléctrico</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-hidromasaje-1-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="hidromasaje-1-hp" data-power="750" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="3">
+                                <label class="form-check-label" for="product-hidromasaje-1-hp"><span
+                                        class="check"></span> Hidromasaje 1 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-hidromasaje-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="hidromasaje-2-hp" data-power="1500" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="3">
+                                <label class="form-check-label" for="product-hidromasaje-2-hp"><span
+                                        class="check"></span> Hidromasaje 2 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-hornilla-vitroceramica-4-fuegos" class="form-check-input"
+                                    type="checkbox" name="product" value="hornilla-vitroceramica-4-fuegos"
+                                    data-power="1200" data-default-amount="1" data-default-daily-use="0.25"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-hornilla-vitroceramica-4-fuegos"><span
+                                        class="check"></span> Hornilla Vitrocerámica 4 fuegos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-hornilla-vitroceramica-6-fuegos" class="form-check-input"
+                                    type="checkbox" name="product" value="hornilla-vitroceramica-6-fuegos"
+                                    data-power="2200" data-default-amount="1" data-default-daily-use="0.25"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-hornilla-vitroceramica-6-fuegos"><span
+                                        class="check"></span> Hornilla Vitrocerámica 6 fuegos</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-horno-electrico" class="form-check-input" type="checkbox"
+                                    name="product" value="horno-electrico" data-power="1200" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-horno-electrico"><span
+                                        class="check"></span> Horno Eléctrico</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-horno-electrico-1800w" class="form-check-input" type="checkbox"
+                                    name="product" value="horno-electrico-1800w" data-power="1800"
+                                    data-default-amount="1" data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-horno-electrico-1800w"><span
+                                        class="check"></span> Horno Eléctrico 1800W</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-horno-electrico-800w" class="form-check-input" type="checkbox"
+                                    name="product" value="horno-electrico-800w" data-power="800" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-horno-electrico-800w"><span
+                                        class="check"></span> Horno Eléctrico 800W</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-horno-microondas-1200w" class="form-check-input" type="checkbox"
+                                    name="product" value="horno-microondas-1200w" data-power="1200"
+                                    data-default-amount="1" data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-horno-microondas-1200w"><span
+                                        class="check"></span> Horno Microondas 1200W</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-horno-microondas-800w" class="form-check-input" type="checkbox"
+                                    name="product" value="horno-microondas-800w" data-power="800"
+                                    data-default-amount="1" data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-horno-microondas-800w"><span
+                                        class="check"></span> Horno Microondas 800W</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-impresora" class="form-check-input" type="checkbox" name="product"
+                                    value="impresora" data-power="100" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-impresora"><span class="check"></span>
+                                    Impresora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lampara-dicroica-20w" class="form-check-input" type="checkbox"
+                                    name="product" value="lampara-dicroica-20w" data-power="20" data-default-amount="5"
+                                    data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lampara-dicroica-20w"><span
+                                        class="check"></span> Lámpara Dicroica 20W</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lampara-dicroica-50w" class="form-check-input" type="checkbox"
+                                    name="product" value="lampara-dicroica-50w" data-power="50" data-default-amount="5"
+                                    data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lampara-dicroica-50w"><span
+                                        class="check"></span> Lámpara Dicroica 50W</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavadora-800-w" class="form-check-input" type="checkbox"
+                                    name="product" value="lavadora-800-w" data-power="800" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavadora-800-w"><span class="check"></span>
+                                    Lavadora (800 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavarropas-10-11kg" class="form-check-input" type="checkbox"
+                                    name="product" value="lavarropas-10-11kg" data-power="330" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavarropas-10-11kg"><span
+                                        class="check"></span> Lavarropas 10-11kg</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavarropas-12-13kg" class="form-check-input" type="checkbox"
+                                    name="product" value="lavarropas-12-13kg" data-power="330" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavarropas-12-13kg"><span
+                                        class="check"></span> Lavarropas 12-13kg</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavarropas-14-16kg" class="form-check-input" type="checkbox"
+                                    name="product" value="lavarropas-14-16kg" data-power="330" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavarropas-14-16kg"><span
+                                        class="check"></span> Lavarropas 14-16kg</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavarropas-8-9kg" class="form-check-input" type="checkbox"
+                                    name="product" value="lavarropas-8-9kg" data-power="330" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavarropas-8-9kg"><span
+                                        class="check"></span> Lavarropas 8-9kg</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavarropas-generica-antigua" class="form-check-input" type="checkbox"
+                                    name="product" value="lavarropas-generica-antigua" data-power="2850"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavarropas-generica-antigua"><span
+                                        class="check"></span> Lavarropas genérica antigua</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lavavajillas" class="form-check-input" type="checkbox" name="product"
+                                    value="lavavajillas" data-power="1100" data-default-amount="1"
+                                    data-default-daily-use="12" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-lavavajillas"><span class="check"></span>
+                                    Lavavajillas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-licuadora" class="form-check-input" type="checkbox" name="product"
+                                    value="licuadora" data-power="300" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-licuadora"><span class="check"></span>
+                                    Licuadora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lijadora-pulidora-exentrica-1-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="lijadora-pulidora-exentrica-1-hp"
+                                    data-power="736" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-lijadora-pulidora-exentrica-1-hp"><span
+                                        class="check"></span> Lijadora - Pulidora Exéntrica (1 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lijadora-pulidora-exentrica-1-5-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="lijadora-pulidora-exentrica-1-5-hp"
+                                    data-power="1104" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-lijadora-pulidora-exentrica-1-5-hp"><span
+                                        class="check"></span> Lijadora - Pulidora Exéntrica (1.5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lijadora-pulidora-exentrica-1-2-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="lijadora-pulidora-exentrica-1-2-hp"
+                                    data-power="373" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-lijadora-pulidora-exentrica-1-2-hp"><span
+                                        class="check"></span> Lijadora - Pulidora Exéntrica (1/2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lijadora-pulidora-exentrica-2-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="lijadora-pulidora-exentrica-2-hp"
+                                    data-power="1492" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-lijadora-pulidora-exentrica-2-hp"><span
+                                        class="check"></span> Lijadora - Pulidora Exéntrica (2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lijadora-pulidora-exentrica-3-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="lijadora-pulidora-exentrica-3-hp"
+                                    data-power="2238" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-lijadora-pulidora-exentrica-3-hp"><span
+                                        class="check"></span> Lijadora - Pulidora Exéntrica (3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-lijadora-pulidora-exentrica-4-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="lijadora-pulidora-exentrica-4-hp"
+                                    data-power="2984" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-lijadora-pulidora-exentrica-4-hp"><span
+                                        class="check"></span> Lijadora - Pulidora Exéntrica (4 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-mezcladora-de-concreto-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="mezcladora-de-concreto-2-hp" data-power="1492"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-mezcladora-de-concreto-2-hp"><span
+                                        class="check"></span> Mezcladora de Concreto (2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-mezcladora-de-concreto-1-3-hp" class="form-check-input"
+                                    type="checkbox" name="product" value="mezcladora-de-concreto-1-3-hp"
+                                    data-power="270" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-mezcladora-de-concreto-1-3-hp"><span
+                                        class="check"></span> Mezcladora de Concreto (1/3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-mezcladora-de-harina-1-5hp" class="form-check-input" type="checkbox"
+                                    name="product" value="mezcladora-de-harina-1-5hp" data-power="1119"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-mezcladora-de-harina-1-5hp"><span
+                                        class="check"></span> Mezcladora de Harina (1.5HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-microondas" class="form-check-input" type="checkbox" name="product"
+                                    value="microondas" data-power="1000" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-microondas"><span class="check"></span>
+                                    Microondas</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-moledora-de-carne-1-2hp" class="form-check-input" type="checkbox"
+                                    name="product" value="moledora-de-carne-1-2hp" data-power="373"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-moledora-de-carne-1-2hp"><span
+                                        class="check"></span> Moledora de Carne (1/2HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  refrigeracion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-mostrador-frigorifico-1000-lts" class="form-check-input"
+                                    type="checkbox" name="product" value="mostrador-frigorifico-1000-lts"
+                                    data-power="745" data-default-amount="1" data-default-daily-use="12"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-mostrador-frigorifico-1000-lts"><span
+                                        class="check"></span> Mostrador Frigorífico (1000 Lts.)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-motor-electrico-40-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="motor-electrico-40-hp" data-power="29840"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-motor-electrico-40-hp"><span
+                                        class="check"></span> Motor Eléctrico (40 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-motor-electrico-1-1-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="motor-electrico-1-1-2-hp" data-power="1123.5"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-motor-electrico-1-1-2-hp"><span
+                                        class="check"></span> Motor Electrico (1 1/2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-motor-electrico-3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="motor-electrico-3-hp" data-power="2238"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-motor-electrico-3-hp"><span
+                                        class="check"></span> Motor Eléctrico (3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-motor-electrico-30-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="motor-electrico-30-hp" data-power="22370"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-motor-electrico-30-hp"><span
+                                        class="check"></span> Motor Eléctrico (30 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  bombas-y-compresores motores">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-motor-electrico-7-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="motor-electrico-7-hp" data-power="5222"
+                                    data-default-amount="1" data-default-daily-use="2" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-motor-electrico-7-hp"><span
+                                        class="check"></span> Motor Eléctrico (7 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-plancha-1000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="plancha-1000-w" data-power="1000" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-plancha-1000-w"><span class="check"></span>
+                                    Plancha (1000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-plancha-2000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="plancha-2000-w" data-power="2000" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-plancha-2000-w"><span class="check"></span>
+                                    Plancha (2000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-plancha-a-vapor-1250-w" class="form-check-input" type="checkbox"
+                                    name="product" value="plancha-a-vapor-1250-w" data-power="1250"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-plancha-a-vapor-1250-w"><span
+                                        class="check"></span> Plancha a Vapor (1250 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-plancha-a-vapor1100-w" class="form-check-input" type="checkbox"
+                                    name="product" value="plancha-a-vapor1100-w" data-power="1100"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-plancha-a-vapor1100-w"><span
+                                        class="check"></span> Plancha a Vapor(1100 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-plancha-alisadora-de-cabello-personal" class="form-check-input"
+                                    type="checkbox" name="product" value="plancha-alisadora-de-cabello-personal"
+                                    data-power="60" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="5">
+                                <label class="form-check-label"
+                                    for="product-plancha-alisadora-de-cabello-personal"><span class="check"></span>
+                                    Plancha alisadora de cabello personal</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-plancha-alisadora-de-cabello-salon" class="form-check-input"
+                                    type="checkbox" name="product" value="plancha-alisadora-de-cabello-salon"
+                                    data-power="160" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-plancha-alisadora-de-cabello-salon"><span
+                                        class="check"></span> Plancha alisadora de cabello salón</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ploter-de-corte" class="form-check-input" type="checkbox"
+                                    name="product" value="ploter-de-corte" data-power="600" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-ploter-de-corte"><span
+                                        class="check"></span> Ploter de Corte</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ploter-de-impresion" class="form-check-input" type="checkbox"
+                                    name="product" value="ploter-de-impresion" data-power="600" data-default-amount="1"
+                                    data-default-daily-use="0.5" data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-ploter-de-impresion"><span
+                                        class="check"></span> Ploter de Impresión</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  audio">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-radio" class="form-check-input" type="checkbox" name="product"
+                                    value="radio" data-power="20" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-radio"><span class="check"></span>
+                                    Radio</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-reflector-1000-w" class="form-check-input" type="checkbox"
+                                    name="product" value="reflector-1000-w" data-power="1000" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-reflector-1000-w"><span
+                                        class="check"></span> Reflector (1000 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-reflector-150-w" class="form-check-input" type="checkbox"
+                                    name="product" value="reflector-150-w" data-power="150" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-reflector-150-w"><span
+                                        class="check"></span> Reflector (150 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-reflector-500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="reflector-500-w" data-power="500" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-reflector-500-w"><span
+                                        class="check"></span> Reflector (500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-sandwichera-1200-w" class="form-check-input" type="checkbox"
+                                    name="product" value="sandwichera-1200-w" data-power="1200" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-sandwichera-1200-w"><span
+                                        class="check"></span> Sandwichera (1200 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-sandwichera-200-w" class="form-check-input" type="checkbox"
+                                    name="product" value="sandwichera-200-w" data-power="200" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-sandwichera-200-w"><span
+                                        class="check"></span> Sandwichera (200 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-sandwichera-700-w" class="form-check-input" type="checkbox"
+                                    name="product" value="sandwichera-700-w" data-power="700" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-sandwichera-700-w"><span
+                                        class="check"></span> Sandwichera (700 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  equipos-de-ofimatica">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-scanner" class="form-check-input" type="checkbox" name="product"
+                                    value="scanner" data-power="85" data-default-amount="1" data-default-daily-use="0.5"
+                                    data-default-weekly-use="6">
+                                <label class="form-check-label" for="product-scanner"><span class="check"></span>
+                                    Scanner</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-cabello-1200-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-cabello-1200-w" data-power="1200"
+                                    data-default-amount="1" data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-cabello-1200-w"><span
+                                        class="check"></span> Secadora de cabello (1200 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-cabello-1250-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-cabello-1250-w" data-power="1250"
+                                    data-default-amount="1" data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-cabello-1250-w"><span
+                                        class="check"></span> Secadora de cabello (1250 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-cabello-600-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-cabello-600-w" data-power="600"
+                                    data-default-amount="1" data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-cabello-600-w"><span
+                                        class="check"></span> Secadora de cabello (600 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-ropa-1200-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-ropa-1200-w" data-power="1200"
+                                    data-default-amount="1" data-default-daily-use="3" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-ropa-1200-w"><span
+                                        class="check"></span> Secadora de Ropa (1200 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-ropa-1600-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-ropa-1600-w" data-power="1600"
+                                    data-default-amount="1" data-default-daily-use="3" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-ropa-1600-w"><span
+                                        class="check"></span> Secadora de Ropa (1600 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-ropa-3500-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-ropa-3500-w" data-power="3500"
+                                    data-default-amount="1" data-default-daily-use="3" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-ropa-3500-w"><span
+                                        class="check"></span> Secadora de Ropa (3500 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-ropa-4700-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-ropa-4700-w" data-power="4700"
+                                    data-default-amount="1" data-default-daily-use="3" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-ropa-4700-w"><span
+                                        class="check"></span> Secadora de Ropa (4700 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  linea-blanca">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-secadora-de-ropa-700-w" class="form-check-input" type="checkbox"
+                                    name="product" value="secadora-de-ropa-700-w" data-power="700"
+                                    data-default-amount="1" data-default-daily-use="3" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-secadora-de-ropa-700-w"><span
+                                        class="check"></span> Secadora de Ropa (700 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-selladora" class="form-check-input" type="checkbox" name="product"
+                                    value="selladora" data-power="100" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-selladora"><span class="check"></span>
+                                    Selladora</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cierra-circular-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="cierra-circular-2-hp" data-power="1472"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cierra-circular-2-hp"><span
+                                        class="check"></span> Sierra Circular (2 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-cierra-circular-5-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="cierra-circular-5-hp" data-power="3730"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-cierra-circular-5-hp"><span
+                                        class="check"></span> Sierra Circular (5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  cuidado-personal-y-salud">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-sillon-dental" class="form-check-input" type="checkbox"
+                                    name="product" value="sillon-dental" data-power="386" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-sillon-dental"><span class="check"></span>
+                                    Sillón Dental</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-soldadora-15-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="soldadora-15-hp" data-power="11000" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-soldadora-15-hp"><span
+                                        class="check"></span> Soldadora (15 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-soldadora-10-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="soldadora-10-hp" data-power="7300" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-soldadora-10-hp"><span
+                                        class="check"></span> Soldadora (10 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-tablero-de-iluminacion" class="form-check-input" type="checkbox"
+                                    name="product" value="tablero-de-iluminacion" data-power="590"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-tablero-de-iluminacion"><span
+                                        class="check"></span> Tablero de Iluminación</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-tablero-electronico" class="form-check-input" type="checkbox"
+                                    name="product" value="tablero-electronico" data-power="40" data-default-amount="1"
+                                    data-default-daily-use="2" data-default-weekly-use="5">
+                                <label class="form-check-label" for="product-tablero-electronico"><span
+                                        class="check"></span> Tablero Electrónico</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-taladro-1-hp" class="form-check-input" type="checkbox" name="product"
+                                    value="taladro-1-hp" data-power="746" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-taladro-1-hp"><span class="check"></span>
+                                    Taladro (1 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-taladro-15-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="taladro-15-hp" data-power="1119" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-taladro-15-hp"><span class="check"></span>
+                                    Taladro (1,5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-taladro-2-a-3-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="taladro-2-a-3-hp" data-power="1860" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-taladro-2-a-3-hp"><span
+                                        class="check"></span> Taladro (2 A 3 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-taladro-3-a-5-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="taladro-3-a-5-hp" data-power="2980" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-taladro-3-a-5-hp"><span
+                                        class="check"></span> Taladro (3 A 5 HP)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  herrramientas-electricas">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-taladro-1-2-hp" class="form-check-input" type="checkbox"
+                                    name="product" value="taladro-1-2-hp" data-power="373" data-default-amount="1"
+                                    data-default-daily-use="1" data-default-weekly-use="1">
+                                <label class="form-check-label" for="product-taladro-1-2-hp"><span class="check"></span>
+                                    Taladro 1/2 HP</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-televisor-de-lcd-32" class="form-check-input" type="checkbox"
+                                    name="product" value="televisor-de-lcd-32" data-power="150" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-televisor-de-lcd-32"><span
+                                        class="check"></span> Televisor de LCD 32"</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-televisor-de-lcd-42" class="form-check-input" type="checkbox"
+                                    name="product" value="televisor-de-lcd-42" data-power="180" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-televisor-de-lcd-42"><span
+                                        class="check"></span> Televisor de LCD 42"</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-televisor-de-lcd-55" class="form-check-input" type="checkbox"
+                                    name="product" value="televisor-de-lcd-55" data-power="220" data-default-amount="1"
+                                    data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-televisor-de-lcd-55"><span
+                                        class="check"></span> Televisor de LCD 55"</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-televisor-smart-led-de-55" class="form-check-input" type="checkbox"
+                                    name="product" value="televisor-smart-led-de-55" data-power="120"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-televisor-smart-led-de-55"><span
+                                        class="check"></span> Televisor Smart-Led de 55"</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-televisor-smart-led-de-32" class="form-check-input" type="checkbox"
+                                    name="product" value="televisor-smart-led-de-32" data-power="70"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-televisor-smart-led-de-32"><span
+                                        class="check"></span> Televisor Smart-Led de 32"</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  video">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-televisor-smart-led-de-42" class="form-check-input" type="checkbox"
+                                    name="product" value="televisor-smart-led-de-42" data-power="92"
+                                    data-default-amount="1" data-default-daily-use="6" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-televisor-smart-led-de-42"><span
+                                        class="check"></span> Televisor Smart-Led de 42"</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-termotanque-electrico-100-lts" class="form-check-input"
+                                    type="checkbox" name="product" value="termotanque-electrico-100-lts"
+                                    data-power="2200" data-default-amount="1" data-default-daily-use="1"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-termotanque-electrico-100-lts"><span
+                                        class="check"></span> Termotanque Eléctrico (100 Lts)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-termotanque-electrico-50-lts" class="form-check-input"
+                                    type="checkbox" name="product" value="termotanque-electrico-50-lts" data-power="800"
+                                    data-default-amount="1" data-default-daily-use="1" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-termotanque-electrico-50-lts"><span
+                                        class="check"></span> Termotanque Eléctrico (50 Lts)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  climatizacion-de-agua">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-termotanque-electrico-85-lts" class="form-check-input"
+                                    type="checkbox" name="product" value="termotanque-electrico-85-lts"
+                                    data-power="2000" data-default-amount="1" data-default-daily-use="6"
+                                    data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-termotanque-electrico-85-lts"><span
+                                        class="check"></span> Termotanque Eléctrico (85 Lts)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-la-cocina">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-tostadora-de-pan" class="form-check-input" type="checkbox"
+                                    name="product" value="tostadora-de-pan" data-power="700" data-default-amount="1"
+                                    data-default-daily-use="0.25" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-tostadora-de-pan"><span
+                                        class="check"></span> Tostadora de pan</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-tubo-fluorescente-20-w" class="form-check-input" type="checkbox"
+                                    name="product" value="tubo-fluorescente-20-w" data-power="20"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-tubo-fluorescente-20-w"><span
+                                        class="check"></span> Tubo Fluorescente (20 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  iluminacion">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-tubo-fluorescente-40-w" class="form-check-input" type="checkbox"
+                                    name="product" value="tubo-fluorescente-40-w" data-power="40"
+                                    data-default-amount="5" data-default-daily-use="8" data-default-weekly-use="7">
+                                <label class="form-check-label" for="product-tubo-fluorescente-40-w"><span
+                                        class="check"></span> Tubo Fluorescente (40 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-200-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-200-w" data-power="200" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-200-w"><span
+                                        class="check"></span> Ventilador (200 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-300-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-300-w" data-power="300" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-300-w"><span
+                                        class="check"></span> Ventilador (300 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-330-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-330-w" data-power="330" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-330-w"><span
+                                        class="check"></span> Ventilador (330 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-373-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-373-w" data-power="373" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-373-w"><span
+                                        class="check"></span> Ventilador (373 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-400-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-400-w" data-power="400" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-400-w"><span
+                                        class="check"></span> Ventilador (400 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-75-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-75-w" data-power="75" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-75-w"><span
+                                        class="check"></span> Ventilador (75 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-80-w" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-80-w" data-power="80" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-80-w"><span
+                                        class="check"></span> Ventilador (80 W)</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product col-12 col-lg-3  electrodomesticos-para-el-hogar">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-ventilador-de-techo" class="form-check-input" type="checkbox"
+                                    name="product" value="ventilador-de-techo" data-power="120" data-default-amount="1"
+                                    data-default-daily-use="3" data-default-weekly-use="4">
+                                <label class="form-check-label" for="product-ventilador-de-techo"><span
+                                        class="check"></span> Ventilador de techo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product col-12 col-lg-3 custom">
+                        <div class="check-container">
+                            <div class="form-check">
+                                <input id="product-custom" class="form-check-input" type="checkbox" name="product"
+                                    value="custom" data-power="0">
+                                <label class="form-check-label" for="product-custom"><span class="check"></span> A
+                                    Medida</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="detalle-consumo" class="tabla-simulador" style="display: none;">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="first-col"></th>
+                            <th scope="col" class="narrow-col">Cantidad</th>
+                            <th scope="col" class="narrow-col">Uso diario</th>
+                            <th scope="col" class="narrow-col">Días por sem.</th>
+                            <th scope="col">Potencia</th>
+                            <th scope="col" class="narrow-col text-right">Consumo</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="itemTemplate" style="display: none;">
+                            <th scope="row" class="first-col"><strong class="name">Lámparas bajo consumo</strong></th>
+                            <td data-label="Cantidad">
+                                <div class="amount">1</div>
+                            </td>
+                            <td data-label="Uso diario">
+                                <div class="hours">3 hs</div>
+                            </td>
+                            <td data-label="Días por sem.">
+                                <div class="days">7</div>
+                            </td>
+                            <td data-label="Potencia">
+                                <div><span class="power">10</span> W <span class="icon icon-edit dark-green"></span>
+                                </div>
+                            </td>
+                            <td class="text-right" data-label="Consumo">
+                                <div><strong class="total-power">14 W</strong></div>
+                            </td>
+                            <td><span class="icon icon-trash dark-green"></span></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="first-col"></th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th id="total-value" class="text-right" colspan="3">Consumo total mes <span id="totalCost"
+                                    class="h3 bold">--</span></th>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="bloque bloque-destacado-dos-col ">
+
+    </section>
+
+</main>
+
+<div class="modal fade modal-bg-green rounded modal-consumo" id="modalcheck" role="dialog">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header d-flex justifi-content-between align-items-center">
+                <h3 class="product-name">--</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row row-add justify-content-start">
+
+                    <div class="col-12 col-md">
+                        <div
+                            class="d-flex flex-row flex-md-column justify-content-between justify-content-md-start align-items-center align-items-md-start">
+                            <p class="small order-0 order-md-1">Potencia <span class="inner" data-toggle="tooltip"
+                                    title="<p>Potencia en W. del equipo</p>
+"><i class="icon icon-info"></i></span></p>
+                            <div class="select-cont order-1 order-md-0">
+                                <div class="form-group">
+                                    <input class="form-control" name="power" type="number" min="0" required value="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <div
+                            class="d-flex flex-row flex-md-column justify-content-between justify-content-md-start align-items-center align-items-md-start">
+                            <p class="small order-0 order-md-1">Cantidad</p>
+                            <div class="select-cont order-1 order-md-0">
+                                <div class="form-group">
+                                    <select name="amount" class="custom-select" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <div
+                            class="d-flex flex-row flex-md-column justify-content-between justify-content-md-start align-items-center align-items-md-start">
+                            <p class="small order-0 order-md-1">Uso diario</p>
+                            <div class="select-cont order-1 order-md-0">
+                                <div class="form-group">
+                                    <select name="hours" class="custom-select" required>
+                                        <option value="0.0833">5 mins</option>
+                                        <option value="0.1666">10 mins</option>
+                                        <option value="0.25">15 mins</option>
+                                        <option value="0.3333">20 mins</option>
+                                        <option value="0.5">30 mins</option>
+                                        <option value="0.75">45 mins</option>
+                                        <option value="1">1 hora</option>
+                                        <option value="1.5">1.5 horas</option>
+                                        <option value="2">2 horas</option>
+                                        <option value="2.5">2.5 horas</option>
+                                        <option value="3">3 horas</option>
+                                        <option value="4">4 horas</option>
+                                        <option value="5">5 horas</option>
+                                        <option value="6">6 horas</option>
+                                        <option value="7">7 horas</option>
+                                        <option value="8">8 horas</option>
+                                        <option value="9">9 horas</option>
+                                        <option value="10">10 horas</option>
+                                        <option value="11">11 horas</option>
+                                        <option value="12">12 horas</option>
+                                        <option value="13">13 horas</option>
+                                        <option value="14">14 horas</option>
+                                        <option value="15">15 horas</option>
+                                        <option value="16">16 horas</option>
+                                        <option value="17">17 horas</option>
+                                        <option value="18">18 horas</option>
+                                        <option value="19">19 horas</option>
+                                        <option value="20">20 horas</option>
+                                        <option value="21">21 horas</option>
+                                        <option value="22">22 horas</option>
+                                        <option value="23">23 horas</option>
+                                        <option value="24">24 horas</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <div
+                            class="d-flex flex-row flex-md-column justify-content-between justify-content-md-start align-items-center align-items-md-start">
+                            <p class="small order-0 order-md-1">Días por sem.</p>
+                            <div class="select-cont order-1 order-md-0">
+                                <div class="form-group">
+                                    <select name="days" class="custom-select" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md">
+                        <div
+                            class="d-flex flex-row flex-md-column justify-content-end justify-content-md-start align-items-center align-items-md-start">
+                            <button id="addToPreliminarTable" type="button"
+                                class="btn btn-light btn-add">Agregar</button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <table class="tabla-calculo table" style="display: none;">
+                    <thead>
+                        <tr>
+                            <th scope="col">Potencia</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Uso diario</th>
+                            <th scope="col">Días por sem.</th>
+                            <th scope="col"></th>
+                    </thead>
+                    <tbody>
+                        <tr id="rowTemplate" style="display: none;">
+                            <td class="power" data-label="Potencia">
+                                <div>10 W</div>
+                            </td>
+                            <td class="amount d-none d-lg-table-cell">
+                                <div>1</div>
+                            </td>
+                            <td class="hours d-none d-lg-table-cell">
+                                <div>3 hs</div>
+                            </td>
+                            <td class="days d-none d-lg-table-cell">
+                                <div>7</div>
+                            </td>
+                            <td class="action-cell"><span class="icon icon-trash"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="btn-container">
+                    <button id="addToTable" type="button" class="btn btn-light">Finalizar</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<a id="showProductsModal" data-toggle="modal" data-target="#modalcheck" style="display: none;"></a>
+<script type='text/javascript'
+    src='https://www.cre.com.bo/wp-content/themes/cre/js/skip-link-focus-fix.js?ver=20151215'></script>
+<script type='text/javascript'
+    src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js?ver=20151215'></script>
+<script type='text/javascript'
+    src='https://www.cre.com.bo/wp-content/themes/cre/js/simulador-consumo.js?ver=1.0.2'></script>

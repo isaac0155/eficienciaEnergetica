@@ -1,0 +1,114 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                // Función para agregar una clasificación dentro de un ambiente
+                function agregarClasificacion(element) {
+                var ambienteIndex = $(element).closest('.ambiente').index();
+                var clasificacionIndex = $(element).closest('.ambiente').find('.clasificacion').length;
+                
+                var clasificacionHTML = '<div class="clasificacion mb-3">';
+                clasificacionHTML += '<h4>Clasificación de Iluminación</h4>';
+                clasificacionHTML += '<div class="input-group mb-3">';
+                clasificacionHTML += '<label for="tipo_foco_' + ambienteIndex + '_' + clasificacionIndex + '" class="form-label">Tipo de Foco:</label>';
+                clasificacionHTML += '<select class="form-select" id="tipo_foco_' + ambienteIndex + '_' + clasificacionIndex + '" name="tipo_foco_' + ambienteIndex + '[]" required>';
+                clasificacionHTML += '<option value="">Seleccionar Tipo de Foco</option>';
+                clasificacionHTML += '<option value="led">LED</option>';
+                clasificacionHTML += '<option value="ahorrador">Ahorrador</option>';
+                clasificacionHTML += '<option value="incandescente">Incandescente</option>';
+                clasificacionHTML += '<option value="fluorescente">Fluorescente</option>';
+                clasificacionHTML += '</select>';
+                clasificacionHTML += '</div>';
+                clasificacionHTML += '<div class="input-group mb-3">';
+                clasificacionHTML += '<label for="lumenes_' + ambienteIndex + '_' + clasificacionIndex + '" class="form-label">Lumenes Lm : </label>';
+                clasificacionHTML += '<input type="number" class="form-control" id="lumenes_' + ambienteIndex + '_' + clasificacionIndex + '" name="lumenes_' + ambienteIndex + '[]" placeholder="Lumenes" value="700" required>';
+                clasificacionHTML += '</div>';
+                clasificacionHTML += '<div class="input-group mb-3">';
+                clasificacionHTML += '<label for="cantidad_' + ambienteIndex + '_' + clasificacionIndex + '" class="form-label">Cantidad : </label>';
+                clasificacionHTML += '<input type="number" class="form-control" id="cantidad_' + ambienteIndex + '_' + clasificacionIndex + '" name="cantidad_' + ambienteIndex + '[]" placeholder="Cantidad" value="1" required>';
+                clasificacionHTML += '</div>';
+                clasificacionHTML += '<div class="input-group mb-3">';
+                clasificacionHTML += '<label for="potencia_' + ambienteIndex + '_' + clasificacionIndex + '" class="form-label">Potencia Watts : </label>';
+                clasificacionHTML += '<input type="number" class="form-control" id="potencia_' + ambienteIndex + '_' + clasificacionIndex + '" name="potencia_' + ambienteIndex + '[]" placeholder="Potencia eléctrica" required>';
+                clasificacionHTML += '</div>';
+                clasificacionHTML += '<div class="input-group mb-3">';
+                clasificacionHTML += '<label for="consumo_diario_' + ambienteIndex + '_' + clasificacionIndex + '" class="form-label">Consumo en horas diarias : </label>';
+                clasificacionHTML += '<input type="number" class="form-control" id="consumo_diario_' + ambienteIndex + '_' + clasificacionIndex + '" name="consumo_diario_' + ambienteIndex + '[]" placeholder="Consumo en horas diarias" required>';
+                clasificacionHTML += '</div>';
+                clasificacionHTML += '<div class="input-group mb-3">';
+                clasificacionHTML += '<label for="area_iluminada_' + ambienteIndex + '_' + clasificacionIndex + '" class="form-label">Área iluminada en m2 : </label>';
+                clasificacionHTML += '<input type="number" class="form-control" id="area_iluminada_' + ambienteIndex + '_' + clasificacionIndex + '" name="area_iluminada_' + ambienteIndex + '[]" placeholder="Área iluminada" required>';
+                clasificacionHTML += '</div>';
+                clasificacionHTML += '<button class="btn btn-danger" type="button" onclick="eliminarClasificacion(this)">Eliminar Clasificación</button>';
+                clasificacionHTML += '</div>';
+                
+                $(element).closest('.ambiente').find('.clasificaciones').append(clasificacionHTML);
+                }
+
+                // Función para eliminar una clasificación
+                function eliminarClasificacion(element) {
+                $(element).closest('.clasificacion').remove();
+                }
+
+                // Función para agregar un ambiente
+                function agregarAmbiente() {
+                var ambienteHTML = '<div class="ambiente border p-3 mb-3">';
+                ambienteHTML += '<h3>Ambiente</h3>';
+                ambienteHTML += '<div class="input-group mb-3">';
+                ambienteHTML += '<label for="nombre_ambiente" class="form-label">Nombre del Ambiente:</label>';
+                ambienteHTML += '<input type="text" class="form-control" id="nombre_ambiente" name="nombre_ambiente[]" placeholder="Nombre del Ambiente" required>';
+                ambienteHTML += '</div>';
+                ambienteHTML += '<div class="clasificaciones"></div>';
+                ambienteHTML += '<button class="btn btn-primary" type="button" onclick="agregarClasificacion(this)">Agregar Clasificación</button>';
+                ambienteHTML += '<button class="btn btn-danger" type="button" onclick="eliminarAmbiente(this)">Eliminar Ambiente</button>';
+                ambienteHTML += '</div>';
+                
+                $('#ambientes').append(ambienteHTML);
+                }
+
+                // Función para eliminar un ambiente
+                function eliminarAmbiente(element) {
+                $(element).closest('.ambiente').remove();
+                }
+            </script>
+            <div class="container mt-5">
+                <h1 class="mb-4 text-center">Registro de Eficiencia en Iluminación Energética</h1>
+                <h5 class="text-center">Tabla a tomar en cuenta si no se tiene referencias</h5>
+                <table class="table table-success list-group-item-action">
+                    <thead>
+                        <tr>
+                            <th>Tipo de Iluminación</th>
+                            <th>Rango de Lúmenes promedio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LED</td>
+                            <td>450-1,500 lúmenes</td>
+                        </tr>
+                        <tr>
+                            <td>Ahorrador (CFL)</td>
+                            <td>800-1,500 lúmenes</td>
+                        </tr>
+                        <tr>
+                            <td>Fluorescente</td>
+                            <td>2,600-3,600 lúmenes</td>
+                        </tr>
+                        <tr>
+                            <td>Incandescente</td>
+                            <td>300-1,100 lúmenes</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <form action="/links/calcEficienciaEnergetica/eficienciailuminacion" method="post">
+                <div id="ambientes"></div>
+                
+                <button class="btn btn-primary" type="button" onclick="agregarAmbiente()">Agregar Ambiente</button>
+                <button class="btn btn-success" type="submit">Guardar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

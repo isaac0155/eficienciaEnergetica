@@ -1,0 +1,109 @@
+<style>
+    body {
+        background-color: #f8f9fa;
+    }
+
+    .jumbotron {
+        background-image:
+            url('imagen_fondo.jpg');
+        background-size: cover;
+        background-position: center;
+        color: #02565c;
+        padding: 4rem 1rem;
+        margin-bottom: 0;
+    }
+
+    .jumb {
+        font-size:
+            3.5rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        text-shadow: 2px 2px 4px rgb(105, 105, 105);
+    }
+
+    .jumbotron p {
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px rgba(116, 116, 116, 0.6);
+    }
+
+    .btn-primary {
+        background-color: #dc3545;
+        border-color: #dc3545;
+    }
+
+    .btn-primary:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+
+    .feature {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .feature img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius:
+            50%;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature h3 {
+        font-size: 2.5rem;
+        margin-bottom:
+            1rem;
+    }
+
+    .feature p {
+        font-size: 1.2rem;
+    }
+</style>
+
+<body>
+    <div class="jumbotron text-center mt-5">
+        <h1 class="display-3 jumb">Bienvenido a nuestra página web</h1>
+        <p class="lead">Elige una opción para comenzar:</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="feature">
+                    <img src="/img/encendiendo.png" alt="Cálculo de Eficiencia de Iluminación" />
+                    <h3>Cálculo de Eficiencia de Iluminación Energética</h3>
+                    <p>Realiza un análisis detallado de la eficiencia de iluminación en tu
+                        hogar o negocio y descubre cómo ahorrar energía.</p>
+                    <a href="/links/calcEficienciaEnergetica/eficienciailuminacion"
+                        class="btn btn-success btn-lg me-sm-3 mb-3 mb-sm-0">Cálculo de Eficiencia de Iluminación
+                        Energética</a>
+                    <a href="/links/calcEficienciaEnergetica/vertodo/"
+                        class="btn btn-outline-success btn-lg">Ver los calculos Anteriores</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature">
+                    <img src="/img/presupuesto.png" alt="Calculadora de Elementos Eléctricos" />
+                    <h3>Calculadora de Elementos Eléctricos del Hogar</h3>
+                    <p>Obtén una estimación precisa de los costos y consumos eléctricos de
+                        tus electrodomésticos y dispositivos.</p>
+                    <a href="/links/calcEficienciaEnergetica/calculadora" class="btn btn-secondary btn-lg">Calculadora
+                        de Elementos Eléctricos del Hogar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

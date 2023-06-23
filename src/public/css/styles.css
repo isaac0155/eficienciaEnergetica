@@ -1,0 +1,50 @@
+.form-group{
+    margin-top: 10px;
+}
+
+body{
+    background: #f3f3f3;
+    font-family: 'Oswald', sans-serif;
+}
+.colorNav{
+    background: #003c44;
+    color: white;
+}
+.todoContenido{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.fondo-negrito{
+    background-color: #000000d0;
+}
+
+.index{
+    width: 100%;
+    height: 100vh;
+}
+.masthead{
+    color: white;
+    min-height: 30rem;
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    background: url('/img/background.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.masthead h1{
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media (min-width: 992px){
+    .masthead h1{
+        font-size: 5.5rem;
+    }
+}
+/*  */

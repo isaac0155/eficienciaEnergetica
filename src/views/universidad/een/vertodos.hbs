@@ -1,0 +1,32 @@
+<div class="container p-4 ">
+    <div class="">
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="text-center p-3 mb-4">
+                    <h2>Historial de resultados de Eficiencia Energetica</h2>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-3" style="">
+            <div class="row g-0">
+                <div class="col-md-4" style="display: flex; justify-content: center;align-items: center;">
+                    <img src="/img/refresh.png" class="img-fluid rounded-start" alt="..." width="200">
+                </div>
+                <div class="col-md-8">
+                    {{#each todos}}
+                    <div class="card-body">
+
+                        <div class="list-group">
+                            <li class="list-group-item list-group-item-action list-group-item-success">
+                                <h5 class="card-title">{{fecha}}</h5>
+                                Se ha realizado un proceso de Eficiencia Energética <br><br>
+                                <a class="btn btn-success" href="/links/calcEficienciaEnergetica/ver/{{idEnergia}}">Ver detalles</a>
+                            </li>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
